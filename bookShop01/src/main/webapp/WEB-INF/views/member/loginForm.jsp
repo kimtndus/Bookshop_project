@@ -72,7 +72,7 @@
 				        	<label for="inputID2">아이디</label>
 				        </TD>
 						<TD>
-							<input name="member_id" type="text" class="form-control" id="inputID2" size="35" placeholder="아이디를 입력해주세요."/>
+							<input name="member_id" type="text" class="form-control" id="inputID2" size="50" placeholder="아이디를 입력해주세요."/>
 						</TD>						
 					</TR>
 					
@@ -83,7 +83,7 @@
 		        <label for="inputPassword2">비밀번호</label>
 		    </TD>
 		    <TD>
-		        <input name="member_pw" type="password" class="form-control" id="inputPassword2" size="35" placeholder="비밀번호를 입력해주세요." />
+		        <input name="member_pw" type="password" class="form-control" id="inputPassword2" size="50" placeholder="비밀번호를 입력해주세요." />
 		    </TD>
 		</TR>
 

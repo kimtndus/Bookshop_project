@@ -1,125 +1,108 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"	isELIgnored="false"
-	%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="utf-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <%
-  request.setCharacterEncoding("UTF-8");
-%>  
+    request.setCharacterEncoding("UTF-8");
+%>
 
-<div id="ad_main_banner">
-	<ul class="bjqs">	 	
-	  <li><img width="775" height="145" src="${contextPath}/resources/image/main_banner01.jpg"></li>
-		<li><img width="775" height="145" src="${contextPath}/resources/image/main_banner02.jpg"></li>
-		<li><img width="775" height="145" src="${contextPath}/resources/image/main_banner03.jpg"></li> 
-	</ul>
-</div>
+<head>
 
+</head>
 
+<body>
 
+    <div id="ad_main_banner">
+        <ul class="bjqs">
+            <li><img width="775" height="145" src="${contextPath}/resources/image/main_banner01.jpg"></li>
+            <li><img width="775" height="145" src="${contextPath}/resources/image/main_banner02.jpg"></li>
+            <li><img width="775" height="145" src="${contextPath}/resources/image/main_banner03.jpg"></li>
+        </ul>
+    </div>
 
+    <div class="main_book">
+        <c:set var="goods_count" value="0" />
 
+        <h3 style="font-size: 17px;">베스트셀러</h3>
 
-<div class="main_book">
-   <c:set  var="goods_count" value="0" />
-   
-	<h3>베스트셀러</h3>
-	
-	<c:forEach var="item" items="${goodsMap.bestseller }">
-	
-	   <c:set  var="goods_count" value="${goods_count+1 }" />
-	   
-		<div class="book">
-			<a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">
-			<img class="link"  src="${contextPath}/resources/image/1px.gif"> 
-			</a> 
-				<img width="121" height="154" 
-				     src="${contextPath}/thumbnails.do?goods_id=${item.goods_id}&fileName=${item.goods_fileName}">
+        <c:forEach var="item" items="${goodsMap.bestseller}" varStatus="loop">
+            <c:set var="goods_count" value="${goods_count + 1}" />
 
-			<div class="title">${item.goods_title }</div>
-			<div class="price">
-		  	   <fmt:formatNumber  value="${item.goods_price}" type="number" var="goods_price" />
-		          ${goods_price}원
-			</div>
-		</div>
-		
-		
-	   <c:if test="${goods_count==15   }">
-         <div class="book">
-           <font size=20> <a href="#">more</a></font>
-         </div>
-     	</c:if>
-     
-  </c:forEach>
-  
-  
-</div>
+            <c:if test="${goods_count <= 4}">
 
+                <div class="book">
+                    <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id}">
+                        <img class="link" src="${contextPath}/resources/image/1px.gif">
+                    </a>
+                    <img width="121" height="154" src="${contextPath}/thumbnails.do?goods_id=${item.goods_id}&fileName=${item.goods_fileName}">
+                    <div class="title">${item.goods_title}</div>
+                    <div class="price">
+                        <fmt:formatNumber value="${item.goods_price}" type="number" var="goods_price" />
+                        ${goods_price}원
+                    </div>
+                </div>
 
+            </c:if>
+        </c:forEach>
 
+    </div>
 
+    <div class="clear"></div>
 
-<div class="clear"></div>
-<div id="ad_sub_banner">
-	<img width="770" height="117" src="${contextPath}/resources/image/sub_banner01.jpg">
-</div>
-<div class="main_book" >
-<c:set  var="goods_count" value="0" />
-	<h3>새로 출판된 책</h3>
-	<c:forEach var="item" items="${goodsMap.newbook }" >
-	   <c:set  var="goods_count" value="${goods_count+1 }" />
-		<div class="book">
-		  <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">
-	       <img class="link"  src="${contextPath}/resources/image/1px.gif"> 
-	      </a>
-		 <img width="121" height="154" 
-				src="${contextPath}/thumbnails.do?goods_id=${item.goods_id}&fileName=${item.goods_fileName}">
-		<div class="title">${item.goods_title }</div>
-		<div class="price">
-		    <fmt:formatNumber  value="${item.goods_price}" type="number" var="goods_price" />
-		       ${goods_price}원
-		  </div>
-	</div>
-	
-	 <c:if test="${goods_count==15   }">
-     <div class="book">
-       <font size=20> <a href="#">more</a></font>
-     </div>
-   </c:if>
-	</c:forEach>
-</div>
+    <div class="main_book">
+        <c:set var="goods_count" value="0" />
 
-<div class="clear"></div>
-<div id="ad_sub_banner">
-	<img width="770" height="117" src="${contextPath}/resources/image/sub_banner02.jpg">
-</div>
+        <h3 style="font-size: 17px;">새로 출판된 책</h3>
+        <div class="slider-container">
+            <div class="slider">
 
+                <c:forEach var="item" items="${goodsMap.newbook}" varStatus="newBookStatus">
+                    <c:if test="${newBookStatus.count <= 2}">
+                        <div class="book slideBook">
+                            <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id}">
+                                <img class="link" src="${contextPath}/resources/image/1px.gif">
+                            </a>
+                            <img width="121" height="154" src="${contextPath}/thumbnails.do?goods_id=${item.goods_id}&fileName=${item.goods_fileName}">
+                            <div class="title">${item.goods_title}</div>
+                            <div class="price">
+                                <fmt:formatNumber value="${item.goods_price}" type="number" var="goods_price" />
+                                ${goods_price}원
+                            </div>
+                        </div>
+                    </c:if>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
 
-<div class="main_book" >
-<c:set  var="goods_count" value="0" />
-	<h3>스테디셀러</h3>
-	<c:forEach var="item" items="${goodsMap.steadyseller }" >
-	   <c:set  var="goods_count" value="${goods_count+1 }" />
-		<div class="book">
-		  <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">
-	       <img class="link"  src="${contextPath}/resources/image/1px.gif"> 
-	      </a>
-		 <img width="121" height="154" 
-				src="${contextPath}/thumbnails.do?goods_id=${item.goods_id}&fileName=${item.goods_fileName}">
-		<div class="title">${item.goods_title }</div>
-		<div class="price">
-		    <fmt:formatNumber  value="${item.goods_price}" type="number" var="goods_price" />
-		       ${goods_price}원
-		  </div>
-	</div>
-	 <c:if test="${goods_count==15   }">
-     <div class="book">
-       <font size=20> <a href="#">more</a></font>
-     </div>
-   </c:if>
-	</c:forEach>
-</div>
+    <!-- 세번째 배너 -->
 
-   
-   
+    <div class="clear"></div>
+
+    <div class="main_book">
+        <c:set var="goods_count" value="0" />
+
+        <h3 style="font-size: 17px;">스테디셀러</h3>
+        <div class="slider-container">
+            <div class="slider">
+                <c:forEach var="item" items="${goodsMap.steadyseller}" varStatus="steadyBookStatus">
+                    <c:if test="${steadyBookStatus.count <= 2}">
+                        <div class="book slideBook">
+                            <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id}">
+                                <img class="link" src="${contextPath}/resources/image/1px.gif">
+                            </a>
+                            <img width="121" height="154" src="${contextPath}/thumbnails.do?goods_id=${item.goods_id}&fileName=${item.goods_fileName}">
+                            <div class="title">${item.goods_title}</div>
+                            <div class="price">
+                                <fmt:formatNumber value="${item.goods_price}" type="number" var="goods_price" />
+                                ${goods_price}원
+                            </div>
+                        </div>
+                    </c:if>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
+
+</body>

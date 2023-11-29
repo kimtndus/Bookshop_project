@@ -1,8 +1,12 @@
-@font-face {
+/* @font-face {
 	font-family: NanumGothic;
 	src: local("?"), url(../imgs/nanum.woff) format("woff"),
 		url(../imgs/nanum.ttf) format("truetype");
-}
+} */
+
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
 
 
 
@@ -21,7 +25,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	color: rgb(102, 102, 102);
-	font-family: "Dotum", Arial, serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1em;
 	background-image: url("../imgs/body_back.gif");
 	background-repeat: repeat-x;
@@ -34,7 +38,7 @@ img {
 }
 
 a {
-	color: rgb(102, 102, 102);
+	color: #000000102102102;
 	text-decoration: none;
 }
 
@@ -172,7 +176,7 @@ header #search .main_input {
 	border: 2px solid rgb(51, 102, 153);
 	border-image: none;
 	width: 450px;
-	height: 50px;
+	height: 40px;
 	
 	border-radius: 7px 7px 0 0;
 	
@@ -199,6 +203,13 @@ header #search .btn1 {
 	
 	border-radius: 10px;
 	
+}
+
+
+header #search .btn1:hover {
+	
+	background-color: rgb(51, 102, 153);	
+	border: solid 1px white;
 }
 
 
@@ -275,7 +286,7 @@ aside #banner {
 	background-position: left;
 	padding: 2px 0px 5px 10px;
 	color: rgb(51, 102, 153);
-	font-family: "NanumGothic";
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.2em;
 	border-bottom-color: rgb(51, 102, 153);
 	border-bottom-width: 1px;
@@ -326,7 +337,7 @@ article hgroup {
 article h1 {
 	padding: 0px 0px 5px;
 	letter-spacing: 2px;
-	font-family: "NanumGothic";
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.1em;
 	border-bottom-color: rgb(102, 102, 102);
 	border-bottom-width: 2px;
@@ -547,6 +558,7 @@ article table#list_view td.buy_btns {
 
 article table#list_view td.buy_btns ul {
 	list-style: none;
+	width: 120px;
 }
 
 article table#list_view td.buy_btns ul li {
@@ -560,12 +572,31 @@ article table#list_view td.buy_btns ul li a {
 	border-image: none;
 	text-align: center;
 	display: block;
+	
+	text-decoration: none;
+	color: black;
+	
+	
+	
 }
 
 article table#list_view td.buy_btns ul li a:hover {
 	color: rgb(255, 255, 255);
 	background-color: rgb(0, 51, 102);
 }
+
+
+.title>a {
+	color: black;
+	text-decoration: none;
+}
+
+
+#page_control>li>a {
+	color: black;
+	text-decoration: none;
+}
+
 
 
 
@@ -722,21 +753,21 @@ article #detail_table {
 }
 
 #detail_table table td span {
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';	
 	font-size: 1.2em;
-	font-weight: bold;
-}
+/* 	font-weight: bold;
+ */}
 
 #detail_table table td.fixed {
 	width: 110px;
-	font-weight: bold;
-	font-size: 0.8em;
+/* 	font-weight: bold;
+ */	font-size: 0.8em;
 }
 
 #detail_table table td.fixed_join {
 	width: 110px;
-	font-weight: bold;
-	font_size:15px;
+/* 	font-weight: bold;
+ */	font_size:15px;
 	color: #0000cc;
 	
 }
@@ -759,7 +790,7 @@ article #detail_table {
 	height: 25px;
 	text-align: center;
 	padding-top: 7px;
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.2em;
 	font-weight: bold;
 	display: block;
@@ -846,8 +877,8 @@ ul.tabs li a {
 	padding: 0px 20px;
 	color: rgb(0, 0, 0);
 	font-size: 12px;
-	font-weight: bold;
-	text-decoration: none;
+/* 	font-weight: bold;
+ */	text-decoration: none;
 	display: block;
 }
 
@@ -893,7 +924,7 @@ ul.tabs li.active a:hover {
 	height: 30px;
 	color: rgb(255, 255, 255);
 	letter-spacing: 4px;
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 16px;
 	font-weight: bold;
 	background-image: url("../imgs/h4_back.png");
@@ -941,7 +972,7 @@ footer ul {
 
 footer ul li {
 	background-position: right;
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	float: left;
 	background-image: url("../imgs/foot_line.gif");
 	background-repeat: no-repeat;
@@ -1019,7 +1050,7 @@ footer img {
 /* 오른쪽 퀵메뉴 이전 / 다음 */
 #sticky div+div a {
     display: inline-block;
-    padding-left: 5.5px; 
+    padding-left: 9px; 
     
     color: white;
     font-size: 21px;
@@ -1221,14 +1252,14 @@ footer img {
 }
 
 .detail_table table td span {
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
 .detail_table table td.fixed {
 	width: 110px;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .detail_table table td.fixed_join {
@@ -1256,7 +1287,7 @@ footer img {
 	height: 25px;
 	text-align: center;
 	padding-top: 7px;
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.2em;
 	font-weight: bold;
 	display: block;
@@ -1317,7 +1348,7 @@ footer img {
 article h1_TITLE {
 	padding: 0px 0px 5px;
 	letter-spacing: 2px;
-	font-family: "NanumGothic";
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.1em;
 	border-bottom-color: rgb(102, 102, 102);
 	border-bottom-width: 2px;
@@ -1334,7 +1365,7 @@ article h1_TITLE {
 	padding: 0px 0px 5px;
 	color: rgb(51, 102, 153);
 	text-transform: uppercase;
-	font-family: "NanumGothic", Serif;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-size: 1.2em;
 	border-bottom-color: rgb(51, 102, 153);
 	border-bottom-width: 1px;

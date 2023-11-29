@@ -93,7 +93,7 @@
 					</td>
 					<td class="goods_description">
 						<h2>
-							<a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">${item.goods_title }</a>
+							<a style="color: black; text-decoration: none; " href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">${item.goods_title }</a>
 						</h2>
 						<c:set var="goods_pub_date" value="${item.goods_published_date }" />
 					   <c:set var="arr" value="${fn:split(goods_pub_date,' ')}" />

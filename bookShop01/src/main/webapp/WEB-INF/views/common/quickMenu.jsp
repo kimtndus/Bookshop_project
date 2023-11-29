@@ -4,6 +4,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
+
+<head>
+
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+
+<style>
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+</style>
+
+</head>
+
 <script>
 	var array_index=0;
 	var SERVER_URL="${contextPath}/thumbnails.do";
@@ -67,6 +78,9 @@ function goodsDetail(){
 	
 }
 </script>
+
+
+
 
 <body>
 	<div id="sticky">
