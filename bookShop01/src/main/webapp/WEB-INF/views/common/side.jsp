@@ -93,7 +93,7 @@
 				<li>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item"
-							style="background: darkcyan; color: white;"><b>음반</b></li>
+							style="background: #5C5452; color: white;"><b>도서</b></li>
 						<li class="list-group-item"><a
 							href="#">IT/인터넷</a></li>
 						<li class="list-group-item"><a href="#">경제/경영</a></li>
@@ -109,13 +109,14 @@
 				<li>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item"
-							style="background: darkcyan; color: white;"><b>음반</b></li>
+							style="background: #5C5452; color: white;"><b>음반</b></li>
 						<li class="list-group-item"><a href="#">K-POP</a></li>
 						<li class="list-group-item"><a href="#">Rock</a></li>
 						<li class="list-group-item"><a href="#">Classic</a></li>
 						<li class="list-group-item"><a href="#">Jazz</a></li>
 					</ul>
 				</li>
+				
 			</c:otherwise>
 		</c:choose>
 	</ul>

@@ -34,28 +34,10 @@
 <script src="${contextPath}/resources/jquery/basic-jquery-slider.js" type="text/javascript"></script>
 <script src="${contextPath}/resources/jquery/tabs.js" type="text/javascript"></script>
 <script src="${contextPath}/resources/jquery/carousel.js" type="text/javascript"></script>
-<script>
-	// 슬라이드 
-	$(document).ready(function() {
-		$('#ad_main_banner').bjqs({
-			'width' : 850,
-			'height' : 400,
-			'showMarkers' : true,
-			'showControls' : false,
-			'centerMarkers' : false
-		});
-	});
-	
-	
-	// 스티키
-	//화면 오른쪽에 계속 같이 움직이는 사이드바
-/*  	$(function() {
-		$("#sticky").stickySidebar({
-			timer : 100,
-			easing : "easeInBounce"
-		});
-	}); */
-</script>
+
+
+
+
 	<title><tiles:insertAttribute name="title" /></title>
 	
 </head>
@@ -65,25 +47,16 @@
 
 
 <body>
-	<div id="outer_wrap">
-		<div id="wrap">
 			<header>
 				   <tiles:insertAttribute name="header" />
 			</header>
 			<div class="clear"></div>
-			<aside>
-				 <tiles:insertAttribute name="side" />
-			</aside>
-			<article>
+			<article style="display: flex; justify-content: center;">
 			 	<tiles:insertAttribute name="body" />
 			</article>
 			<div class="clear"></div>
-			<footer>
-        		<tiles:insertAttribute name="footer" />
-        	</footer>
-		</div>
-		 <tiles:insertAttribute name="quickMenu" />
-    </div>        	
+
+    	
 </body>      
         
         

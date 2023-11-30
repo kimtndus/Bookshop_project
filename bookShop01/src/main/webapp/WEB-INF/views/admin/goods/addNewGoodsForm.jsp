@@ -57,7 +57,15 @@
 				<td width=200 >제품분류</td>
 				<td width=500><select name="goods_sort">
 						<option value="컴퓨터와 인터넷" selected>컴퓨터와 인터넷
-						<option value="디지털 기기">디지털 기기
+						<option value="경제/경영">경제/경영
+						<option value="대학교재">대학교재
+						<option value="자기계발">자기계발
+						<option value="자연과학/공학">자연과학/공학
+						<option value="역사/인문학">역사/인문학
+						<option value="K-POP">k-POP
+						<option value="ROCK">ROCK
+						<option value="CLASSIC">CLASSIC
+						<option value="JAZZ">JAZZ
 					</select>
 				</td>
 			</tr>

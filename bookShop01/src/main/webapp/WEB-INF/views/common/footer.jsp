@@ -33,7 +33,7 @@
 </div>
 
 <div class="clear"></div>
-<a href="#"><img width="147px"  height="62px" alt="Booktopia" src="${contextPath}/resources/image/Booktopia_Logo2.jpg" /></a>
+<a href="#"><img width="147px"  height="100px" alt="Bookshop" src="${contextPath}/resources/image/bookshop_Logo.png" /></a>
 <div style="padding-left:200px">
 	 ㈜북토피아 <br>
 	 대표이사: 김대표   <br>

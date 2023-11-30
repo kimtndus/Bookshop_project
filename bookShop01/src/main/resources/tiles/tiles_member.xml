@@ -29,6 +29,19 @@
          <put-attribute name="title" value="회원 가입 페이지" />
          <put-attribute name="body" value="/WEB-INF/views/member/memberForm.jsp" />
       </definition>
+
+
+
+      <definition name="/member/find_id" extends="MemberInLayout">
+         <put-attribute name="title" value="아이디 찾기" />
+         <put-attribute name="body" value="/WEB-INF/views/member/find_id.jsp" />
+      </definition>
+
+      <definition name="/member/find_id_result" extends="MemberInLayout">
+         <put-attribute name="title" value="아이디 찾기" />
+         <put-attribute name="body" value="/WEB-INF/views/member/find_id_result.jsp" />
+      </definition>
+  
   
   
 </tiles-definitions>

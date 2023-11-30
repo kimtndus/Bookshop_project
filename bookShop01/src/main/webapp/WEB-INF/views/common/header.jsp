@@ -95,9 +95,9 @@
 
 	<!-- 헤더 북토피아 로고 사진 -->
 	<div id="logo">
-		<a href="${contextPath}/main/main.do"> <img width="176"
-			height="80" alt="booktopia"
-			src="${contextPath}/resources/image/Booktopia_Logo.jpg">
+		<a href="${contextPath}/main/main.do"> <img width="230"
+			height="130" alt="booktopia"
+			src="${contextPath}/resources/image/bookshop_Logo.png">
 		</a>
 	</div>
 
@@ -126,9 +126,8 @@
 						<!-- 주문배송 구현안됨 -->
 						<button type="button" class="btn btn-outline-primary"
 							onclick="location.href='#'">주문배송</button>
-						<!-- 고객센터도 아직 구현안됨 구현하면 링크바구기 아니 왜 시프트키가 안먹지 -->
 						<button type="button" class="btn btn-outline-primary"
-							onclick="location.href='#'">고객센터</button>
+							onclick="location.href='${contextPath}/center/centerMain.do'">고객센터</button>
 					</div>
 				</c:when>
 
@@ -143,7 +142,7 @@
 						<button type="button" class="btn btn-outline-primary"
 							onclick="location.href='${contextPath}/member/memberForm.do'">회원가입</button>
 						<button type="button" class="btn btn-outline-primary"
-							onclick="location.href='#'">고객센터</button>
+							onclick="location.href='${contextPath}/center/centerMain.do'">고객센터</button>
 					</div>
 				</c:otherwise>
 			</c:choose>
