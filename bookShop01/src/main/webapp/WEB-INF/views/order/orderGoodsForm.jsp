@@ -24,7 +24,7 @@
 
 <style>
 #layer {
-	z-index: 2;
+	z-index: 10;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -32,13 +32,13 @@
 }
 
 #popup_order_detail {
-	z-index: 3;
+	z-index: 5;
 	position: fixed;
 	text-align: center;
-	left: 10%;
-	top: 0%;
-	width: 60%;
-	height: 100%;
+	left: 35%;
+	top: 10%;
+	width: 80%;
+	height: 80%;
 	border: 1px solid #008080;
 }
 
@@ -423,7 +423,7 @@ function fn_show_order_detail(){
 
 function fn_process_pay_order(){
 	
-	alert("최종 결제하기");
+	alert("결제가 완료되었습니다.");
 	var formObj=document.createElement("form");
     var i_receiver_name=document.createElement("input");
     
@@ -508,7 +508,7 @@ function fn_process_pay_order(){
 </script>
 </head>
 <body>
-	<H1>1.주문확인</H1>
+	<H1>주문확인</H1>
 <form  name="form_order">	
 	<table class="list_view">
 		<tbody align=center>
@@ -560,10 +560,10 @@ function fn_process_pay_order(){
 
 	<br>
 	<br>
-	<H1>2.배송지 정보</H1>
+	<H1>배송지 정보</H1>
 	<DIV class="detail_table">
 	
-		<table>
+		<table style="border-right: 2px solid white;">
 			<tbody>
 				<tr class="dot_line">
 					<td class="fixed_join">배송방법</td>
@@ -707,43 +707,7 @@ function fn_process_pay_order(){
 	<br>
 	<br>
 	<br>
-
-
-	<H1>3.할인 정보</H1>
-	<div class="detail_table">
-		<table>
-			<tbody>
-				<tr class="dot_line">
-					<td width=100>적립금</td>
-					<td><input name="discount_juklip" type="text" size="10" />원/1000원
-						&nbsp;&nbsp;&nbsp; <input type="checkbox" /> 모두 사용하기</td>
-				</tr>
-				<tr class="dot_line">
-					<td>예치금</td>
-					<td><input name="discount_yechi" type="text" size="10" />원/1000원
-						&nbsp;&nbsp;&nbsp; <input type="checkbox" /> 모두 사용하기</td>
-				</tr>
-				<tr class="dot_line">
-					<td>상품권 전환금</td>
-					<td cellpadding="5"><input name="discount_sangpum" type="text"
-						size="10" />원/0원 &nbsp;&nbsp;&nbsp; <input type="checkbox" /> 모두
-						사용하기</td>
-				</tr>
-				<tr class="dot_line">
-					<td>OK 캐쉬백 포인트</td>
-					<td cellpadding="5"><input name="discount_okcashbag" type="text"
-						size="10" />원/0원 &nbsp;&nbsp;&nbsp; <input type="checkbox" /> 모두
-						사용하기</td>
-				</tr>
-				<tr class="dot_line">
-					<td>쿠폰할인</td>
-					<td cellpadding="5"><input name="discount_coupon" type="text"
-						size="10" />원/0원 &nbsp;&nbsp;&nbsp; <input type="checkbox" /> 모두
-						사용하기</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	
 	<div class="clear"></div>
 
 	<br>
@@ -793,9 +757,9 @@ function fn_process_pay_order(){
 	<br>
 	<br>
 	<br>
-	<h1>4.결제정보</h1>
-	<div class="detail_table">
-		<table>
+	<h1>결제정보</h1>
+	<div class="detail_table" >
+		<table style="border-right: 2px solid white;">
 			<tbody>
 				<tr >
 					<td>
@@ -849,9 +813,9 @@ function fn_process_pay_order(){
 				<tr id="tr_pay_phone" style="visibility:hidden">
 				  <td>
 				  <strong>휴대폰 번호 입력: <strong>
-				  	       <input  type="text" size="5" value=""  id="pay_order_tel1" name="pay_order_tel1" />-
-				           <input  type="text" size="5" value="" id="pay_order_tel2" name="pay_order_tel2" />-
-				           <input  type="text" size="5" value="" id="pay_order_tel3" name="pay_order_tel3" />
+				  	       <input  type="text" size="3" value=""  id="pay_order_tel1" name="pay_order_tel1" />-
+				           <input  type="text" size="4" value="" id="pay_order_tel2" name="pay_order_tel2" />-
+				           <input  type="text" size="4" value="" id="pay_order_tel3" name="pay_order_tel3" />
 				  </td>
 				</tr>
 			</tbody>
@@ -867,18 +831,16 @@ function fn_process_pay_order(){
 		<br><!--  <a href="javascript:fn_show_order_detail();"> --> 
 		<button type="button" class="btn btn-success" onclick="fn_show_order_detail();">결제하기</button>
 		
-		
-		<%-- </a> <a href="${contextPath}/main/main.do"> 
-		   <img width="75" alt="" src="${contextPath}/resources/image/btn_shoping_continue.jpg">
-		</a> --%>
-<%-- 		<button type="button" class="btn btn-warning" onclick="${contextPath}/main/main.do">Warning</button>
- --%>		<button type="button" class="btn btn-outline-warning" onclick="${contextPath}/main/main.do">쇼핑 계속하기</button>
+ 		<button type="button" class="btn btn-outline-warning" onclick="location.href='${contextPath}/main/main.do'">쇼핑 계속하기</button>
 		
 	
 <div class="clear"></div>
 
+
+
+
 		
-	<div id="layer" style="visibility:hidden">
+	<div id="layer" style="visibility:hidden;">
 		<!-- visibility:hidden 으로 설정하여 해당 div안의 모든것들을 가려둔다. -->
 		<div id="popup_order_detail">
 			<!-- 팝업창 닫기 버튼 -->

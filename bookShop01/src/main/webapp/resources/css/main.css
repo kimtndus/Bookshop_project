@@ -173,7 +173,7 @@ header #search form {
 header #search .main_input {
 	font-weight: bold;
 	padding: 0px 15px;
-	border: 2px solid rgb(51, 102, 153);
+	border: 2px solid black;
 	border-image: none;
 	width: 450px;
 	height: 40px;
@@ -191,14 +191,14 @@ header #search .main_input {
 
 /* 검색 버튼 */
 header #search .btn1 {
-	border: 1px solid rgb(51, 102, 153);
+	border: 1px solid lightgray;
 	border-image: none;
 	width: 75px;
 	height: 45px;
 	margin-left: 2px;
-	background-color: rgb(51, 102, 153);
+	background-color: black;
 	
-	color: rgb(255, 255, 255);
+	color: white;
 	font-size:20px;
 	
 	border-radius: 10px;
@@ -208,8 +208,9 @@ header #search .btn1 {
 
 header #search .btn1:hover {
 	
-	background-color: rgb(51, 102, 153);	
-	border: solid 1px white;
+	background-color: #323232;
+	color: white;	
+	border: solid 2px white;
 }
 
 
@@ -326,8 +327,9 @@ article #ad_main_banner {
 	margin: 10px 0px;
 }
 
-article #ad_sub_banner {
-	margin: 10px 0px;
+
+article #ad_main_banner2 {
+	margin: 50px 0px 10px 0px;
 }
 
 article hgroup {
@@ -1017,9 +1019,9 @@ footer img {
 }
 
 /* 940px 이상의 화면에 대한 미디어 쿼리 */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width:1220px) {
     #sticky {
-        display: block; /* 화면이 940px 이상일 때 요소를 표시함 */
+        display: block; 
     }
 }
 
@@ -1224,8 +1226,8 @@ footer img {
 	
 	
 	
-	border-top-color: rgb(51, 51, 51);
-	border-bottom-color: rgb(51, 51, 51);
+	border-top-color: white;
+	border-bottom-color: white;
 	border-top-width: 2px;
 	border-bottom-width: 1px;
 	border-top-style: solid;
@@ -1236,7 +1238,7 @@ footer img {
 /* 주문확인 팝업 */
 .detail_table table td {
 	padding: 7px 0px 7px 10px;
-	border-right: 0.5px solid black;
+	border-right: 0.5px solid white;
 }
 
 .detail_table table tr.dot_line {
@@ -1265,7 +1267,7 @@ footer img {
 .detail_table table td.fixed_join {
 	width: 110px;
 	font-weight: bold;
-	color: #0000cc;
+	color: #0000a0;
 	background: white;
 }
 
@@ -1436,13 +1438,13 @@ div #suggest {
 	position: absolute;
 	
 	margin-top:-10px;
-	margin-left: 296px;
+	margin-left: 350px;
 
 	width:450px;
 	
 	border-width: 0 2px 2px 2px; /* 위쪽을 제외한 다른 세 변에만 border 적용 */
     border-style: solid;
-    border-color: rgb(51, 102, 153);
+    border-color: black;
         
 	border-radius: 0px 0px 13px 13px;
 	

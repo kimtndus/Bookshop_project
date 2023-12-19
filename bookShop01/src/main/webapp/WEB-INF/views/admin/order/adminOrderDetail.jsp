@@ -43,7 +43,7 @@ function fn_modify_order_state(order_id){
 </script>
 </head>
 <body>
-	<H1>1. 주문 상세정보</H1>
+	<H1>주문 상세정보</H1>
 	<table class="list_view">
 		<tbody align=center>
 			<tr style="background: #33ff00">
@@ -52,7 +52,7 @@ function fn_modify_order_state(order_id){
 				<td>수량</td>
 				<td>주문금액</td>
 				<td>배송비</td>
-				<td>예상적립금</td>
+				<!-- <td>예상적립금</td> -->
 				<td>주문금액합계</td>
 			</tr>
 			<tr>
@@ -85,7 +85,7 @@ function fn_modify_order_state(order_id){
 <form name="frm_delivery_list" >	
 	<br>
 	<br>
-	<h1>2.배송지 정보</h1>
+	<h1>배송지 정보</h1>
 	<div class="detail_table">
 	
 		<table>
@@ -166,9 +166,9 @@ function fn_modify_order_state(order_id){
 	<br>
 	<br>
 	<br>
-	<h1>3.결제정보</h1>
+	<h1>결제정보</h1>
 	<div class="detail_table">
-		<table>
+		<table >
 			<tbody>
 				<tr class="dot_line">
 					<td class="fixed_join">결제방법</td>
@@ -195,7 +195,7 @@ function fn_modify_order_state(order_id){
 	<br>
 	<br>
 	<br>
-	<h1>3.배송상태</h1>
+	<h1>배송상태</h1>
 	<div class="detail_table">
 		<table>
 			<tbody>

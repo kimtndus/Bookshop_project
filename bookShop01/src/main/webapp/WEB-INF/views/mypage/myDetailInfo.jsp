@@ -11,7 +11,9 @@
 
 
 <meta charset="utf-8">
+
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
  <script>
     function execDaumPostcode() {
         new daum.Postcode({
@@ -95,7 +97,7 @@
        } 
      
    }
-
+    
 
 function fn_modify_member_info(attribute){
 	var value;
@@ -202,6 +204,10 @@ function fn_modify_member_info(attribute){
 			value=value_zipcode+","+value_roadAddress+","+value_jibunAddress+","+value_namujiAddress;
 		}
 		console.log(attribute);
+		
+		
+		
+		
 	 
 		$.ajax({
 			type : "post",
@@ -228,6 +234,10 @@ function fn_modify_member_info(attribute){
 			}
 		}); //end ajax
 }
+
+
+
+
 </script>
 </head>
 
@@ -282,7 +292,6 @@ function fn_modify_member_info(attribute){
 					   </c:choose>
 					</td>
 					<td>
-<!-- 					  <input type="button" value="수정하기" onClick="fn_modify_member_info('member_gender')" /> -->
   						<button type="button" class="btn btn-outline-secondary" onClick="fn_modify_member_info('member_gender')">수정하기</button>
 					  
 					</td>
@@ -410,7 +419,6 @@ function fn_modify_member_info(attribute){
 					 </c:choose>	
 				    </td>
 					<td>
-<!-- 					  <input type="button" value="수정하기" onClick="fn_modify_member_info('hp')" /> -->
   						<button type="button" class="btn btn-outline-secondary" onClick="fn_modify_member_info('hp')">수정하기</button>
 					</td>	
 				</tr>
@@ -442,25 +450,22 @@ function fn_modify_member_info(attribute){
 								  <label class="form-check-label" for="flexSwitchCheckDefault">쇼핑몰에서 발송하는 e-mail을 수신합니다.</label>
 							</div> 
 						
-<!-- 					     <input type="checkbox" name="emailsts_yn"  value="Y" checked /> 쇼핑몰에서 발송하는 e-mail을 수신합니다.
- -->						</c:when>
+						</c:when>
 						
 						
 						
 						
 						<c:otherwise>
-<!-- 						  <input type="checkbox" name="emailsts_yn"  value="N"  /> 쇼핑몰에서 발송하는 e-mail을 수신합니다.
- -->						  
+						  
  					  		 <div class="form-check form-switch">
-								  <input name="emailsts_yn" value="N" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-								  <label class="form-check-label" for="flexSwitchCheckDefault">쇼핑몰에서 발송하는 e-mail을 수신합니다.</label>
+								  <input name="emailsts_yn" value="N" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+								  <label class="form-check-label" for="flexSwitchCheckDefault2">쇼핑몰에서 발송하는 e-mail을 수신합니다.</label>
 							</div> 
 						  
 						</c:otherwise>
 					 </c:choose>
 					</td>
 					<td>
-<!-- 					  <input type="button" value="수정하기" onClick="fn_modify_member_info('email')" /> -->
    						<button type="button" class="btn btn-outline-secondary" onClick="fn_modify_member_info('email')">수정하기</button>
 					  
 					</td>
@@ -481,11 +486,13 @@ function fn_modify_member_info(attribute){
 					   </p>
 					</td>
 					<td>
-<!-- 					  <input type="button" value="수정하기" onClick="fn_modify_member_info('address')" /> -->
   					<button type="button" class="btn btn-outline-secondary" onClick="fn_modify_member_info('address')">수정하기</button>
+  					
 					  
 					</td>
 				</tr>
+				
+				
 			</tbody>
 		</table>
 		</div>
@@ -493,9 +500,8 @@ function fn_modify_member_info(attribute){
 		<br><br>
 		<table align=center>
 		<tr>
-			<td >
+			<td>
 				<input type="hidden" name="command"  value="modify_my_info" /> 
-<!-- 				<input name="btn_cancel_member" type="button"  value="수정 취소"> -->
 			</td>
 		</tr>
 	</table>

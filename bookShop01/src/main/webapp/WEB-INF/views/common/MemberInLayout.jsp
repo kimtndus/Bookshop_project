@@ -43,6 +43,17 @@
 			'centerMarkers' : false
 		});
 	});
+
+	// 슬라이드 
+	$(document).ready(function() {
+		$('#ad_main_banner2').bjqs2({
+			'width' : 775,
+			'height' : 145,
+			'showMarkers' : true,
+			'showControls' : false,
+			'centerMarkers' : false
+		});
+	});
 	
 
 </script>

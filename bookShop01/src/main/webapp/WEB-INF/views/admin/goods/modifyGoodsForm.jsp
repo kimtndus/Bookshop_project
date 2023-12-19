@@ -208,10 +208,51 @@ function fn_modify_goods(goods_id, attribute){
 						<option value="컴퓨터와 인터넷" selected>컴퓨터와 인터넷 </option>
 				  	    <option value="디지털 기기">디지털 기기  </option>
 				  	  </c:when>
+				  	  
+				  	  
 				  	  <c:when test="${goods.goods_sort=='디지털 기기' }">
 						<option value="컴퓨터와 인터넷" >컴퓨터와 인터넷 </option>
 				  	    <option value="디지털 기기" selected>디지털 기기  </option>
 				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='경제/경영' }">
+						<option value="경제/경영" >경제/경영 </option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='대학교재' }">
+						<option value="대학교재" >대학교재</option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='자기계발' }">
+						<option value="자기계발" >자기계발 </option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='자연과학/공학' }">
+						<option value="자연과학/공학" >자연과학/공학 </option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='역사/인문학' }">
+						<option value="역사/인문학" >역사/인문학</option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='K-POP' }">
+						<option value="K-POP" >K-POP</option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='ROCK' }">
+						<option value="ROCK" >ROCK</option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='CLASSIC' }">
+						<option value="CLASSIC" >CLASSIC</option>
+				  	  </c:when>
+
+				  	  <c:when test="${goods.goods_sort=='JAZZ' }">
+						<option value="JAZZ" >JAZZ</option>
+				  	  </c:when>
+
+
+
 				  	</c:choose>
 					</select>
 				</td>

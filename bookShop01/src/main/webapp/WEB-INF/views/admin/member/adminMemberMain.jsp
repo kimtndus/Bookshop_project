@@ -10,6 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <script>
 function search_member(search_period){	
 	temp=calcPeriod(search_period);
@@ -218,19 +219,142 @@ function fn_detail_search(){
     formObj.submit();
 	
 }
+
+
+
 </script>
 </head>
 <body>
-	<H3>회원 조회</H3>
-	<form name="frm_delivery_list" >	
+	<H3>주문 배송 조회</H3>
+	<form  method="post">	
+			<table>
+			<tbody>
+				<!-- <tr>
+					<td style="padding-top: 15px; padding-bottom: 15px;">
+						<div class="form-check">
+					  <input class="form-check-input" type="radio" name="r_search" id="flexRadioDefault2" checked>
+					  <label class="form-check-label" for="flexRadioDefault1">
+					    등록일로조회
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="r_search" id="flexRadioDefault1">
+					  <label class="form-check-label" for="flexRadioDefault2">
+					    상세조회
+					  </label>
+					</div>
+					</td>
+				</tr> -->
+				
+				
+				
+				<br>
+				<tr>
+					<td>
+					  <select name="curYear">
+					    <c:forEach   var="i" begin="0" end="5" >
+					      <c:choose>
+					        <c:when test="${endYear==endYear-i }">
+					          <option value="${endYear}" selected>${endYear}</option>
+					        </c:when>
+					        <c:otherwise>
+					          <option value="${endYear-i }">${endYear-i }</option>
+					        </c:otherwise>
+					      </c:choose>
+					    </c:forEach>
+					</select>년 <select name="curMonth" >
+						 <c:forEach   var="i" begin="1" end="12">
+					      <c:choose>
+					        <c:when test="${endMonth==i }">
+					          <option value="${i }"  selected>${i }</option>
+					        </c:when>
+					        <c:otherwise>
+					          <option value="${i }">${i }</option>
+					        </c:otherwise>
+					      </c:choose>
+					    </c:forEach>					
+					</select>월
+					
+					 <select name="curDay">
+					  <c:forEach   var="i" begin="1" end="31">
+					      <c:choose>
+					        <c:when test="${endDay==i }">
+					          <option value="${i }"  selected>${i }</option>
+					        </c:when>
+					        <c:otherwise>
+					          <option value="${i }">${i }</option>
+					        </c:otherwise>
+					      </c:choose>
+					    </c:forEach>	
+					</select>
+					
+					
+					
+					
+					
+						일 &nbsp; ~ &nbsp;&nbsp;&nbsp;&nbsp;
+						<div class="btn-group" role="group"
+							aria-label="Basic outlined example">
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('today')">당일</button>
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('one_week')">1주</button>
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('two_week')">2주</button>
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('one_month')">1개월</button>
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('two_month')">2개월</button>
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('three_month')">3개월</button>
+							<button type="button" class="btn btn-outline-primary"
+								onclick="search_order_history('four_month')">4개월</button>
+						</div>  &nbsp; <br>
+						
+					
+					
+					
+					
+					
+					
+					</td>
+				</tr>
+				
+				<tr>
+				  <td style="padding-top: 15px; padding-bottom: 15px;  ">
+				    <select name="search_condition">
+						<option value="2015" checked>전체</option>
+						<option value="2014">수령자</option>
+						<option value="2013">주문자</option>
+						<option value="2012">주문번호</option>
+					</select>
+					<input  type="text"  size="30" />  
+					<input   type="button"  value="조회"/>
+				  </td>
+				</tr>
+				<tr>
+				  <td style="padding-top: 15px; padding-bottom: 15px;">
+					조회한 기간:<input  type="text"  size="4" value="${beginYear}" />년
+							<input  type="text"  size="4" value="${beginMonth}"/>월	
+							 <input  type="text"  size="4" value="${beginDay}"/>일	
+							 &nbsp; ~
+							<input  type="text"  size="4" value="${endYear}" />년 
+							<input  type="text"  size="4" value="${endMonth}"/>월	
+							 <input  type="text"  size="4" value="${endDay}"/>일							 
+				  </td>
+				</tr>
+			</tbody>
+		</table>
+	<%-- <H3>회원 조회</H3>
+	<form name="frm_delivery_list"  style="margin-top:30px;">	
 		<table cellpadding="10" cellspacing="10"  >
 			<tbody>
-				<tr>
+<!-- 				<tr>
 					<td>
 						<input type="radio" name="r_search_option" value="simple_search" checked onClick="fn_enable_detail_search(this)"/> 간단조회 &nbsp;&nbsp;&nbsp;
 						<input type="radio" name="r_search_option" value="detail_search"  onClick="fn_enable_detail_search(this)" /> 상세조회 &nbsp;&nbsp;&nbsp;
 					</td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td>
 					  <select name="curYear">
@@ -268,13 +392,7 @@ function fn_detail_search(){
 					        </c:otherwise>
 					      </c:choose>
 					    </c:forEach>	
-					</select>
-					
-					
-					
-					
-					
-					일  &nbsp;이전&nbsp;&nbsp;&nbsp;&nbsp; 
+					</select>일  &nbsp;이전&nbsp;&nbsp;&nbsp;&nbsp; 
 					<a href="javascript:search_member('today')">
 					   <img   src="${pageContext.request.contextPath}/resources/image/btn_search_one_day.jpg">
 					</a>
@@ -403,7 +521,7 @@ function fn_detail_search(){
 					        </c:otherwise>
 					      </c:choose>
 					    </c:forEach>	
-					</select>
+					</select> --%>
 												 
 				  </td>
 				</tr>
@@ -486,12 +604,15 @@ function fn_detail_search(){
          <tr>
              <td colspan=8 class="fixed">
                  <c:forEach   var="page" begin="1" end="10" step="1" >
-		         <c:if test="${chapter >1 && page==1 }">
-		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${chapter-1}&pageNum=${(chapter-1)*10 +1 }">&nbsp;pre &nbsp;</a>
+                 <!--  chapter를 section으로 수정  -->
+		         <c:if test="${section >1 && page==1 }">
+		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${section-1}&pageNum=${(section-1)*10 +1 }">&nbsp;pre &nbsp;</a>
 		         </c:if>
-		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${chapter}&pageNum=${page}">${(chapter-1)*10 +page } </a>
+		         
+		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${section}&pageNum=${page}">${(section-1)*10 +page } </a>
+		        
 		         <c:if test="${page ==10 }">
-		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${chapter+1}&pageNum=${chapter*10+1}">&nbsp; next</a>
+		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${section+1}&pageNum=${section*10+1}">&nbsp; next</a>
 		         </c:if> 
 	      		</c:forEach> 
            </td>
@@ -504,12 +625,15 @@ function fn_detail_search(){
  <c:when test="${not empty order_goods_list }">	
    <DIV id="page_wrap">
 		 <c:forEach   var="page" begin="1" end="10" step="1" >
+		 <!--  이 아래도 chapter를 section으로 수정해야 할지도? -->
 		         <c:if test="${chapter >1 && page==1 }">
-		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${chapter-1}&pageNum=${(chapter-1)*10 +1 }">&nbsp;pre &nbsp;</a>
+		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${section-1}&pageNum=${(chapter-1)*10 +1 }">&nbsp;pre &nbsp;</a>
 		         </c:if>
-		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${chapter}&pageNum=${page}">${(chapter-1)*10 +page } </a>
+		         
+		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${section}&pageNum=${page}">${(chapter-1)*10 +page } </a>
+		         
 		         <c:if test="${page ==10 }">
-		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${chapter+1}&pageNum=${chapter*10+1}">&nbsp; next</a>
+		          <a href="${pageContext.request.contextPath}/admin/member/adminMemberMain.do?chapter=${section+1}&pageNum=${chapter*10+1}">&nbsp; next</a>
 		         </c:if> 
 	      </c:forEach> 
 	</DIV>	

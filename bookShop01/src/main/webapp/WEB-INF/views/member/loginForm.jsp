@@ -95,45 +95,12 @@
 			
 			
 			
-			<!-- 부트 스트랩  -->
-<!-- 			<form class="row g-3">
-			  <div class="col-auto">
-			    <label for="staticEmail2" class="visually-hidden">Email</label>
-			    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-			  </div>
-  
-  <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  
-  
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-  </div>
-</form> -->
-			
-			
-			
-			
-			
-			
-			
-			<!-- 확인해보기  -->
-			<!-- <button type="button" class="btn btn-success">Success</button> -->
-			
-			
 			<br> <br>
 			
 			
 			<button type="submit" class="btn btn-primary mb-3">로그인</button>
-			 
-			<!-- <INPUT type="submit" class="btn btn-success" value="로그인"> 
-			<INPUT type="button" class="btn btn-success" value="초기화"> --> 
 			<Br> <br> 
-			<a href="#">아이디찾기</a> | <a href="#">비밀번호 찾기</a> | <a
-				href="${contextPath}/member/addMember.do">회원가입</a> | <a href="#">고객
-				센터</a>
+			<a href="${contextPath}/member/memberForm.do">회원가입</a> | <a href="${contextPath}/center/centerMain.do">고객센터</a>
 
 		</form>
 </body>

@@ -36,7 +36,7 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 			                  HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
 		 memberVO=memberService.login(loginMap);
-		if(memberVO!= null && memberVO.getMember_id()!=null){
+		if(memberVO != null && memberVO.getMember_id() !=null  && "N".equals(memberVO.getDel_yn())){
 			HttpSession session=request.getSession();
 			session=request.getSession();
 			session.setAttribute("isLogOn", true);
@@ -51,7 +51,7 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 			
 			
 			
-		}else{
+		} else{
 			String message="아이디나  비밀번호가 틀립니다. 다시 로그인해주세요";
 			mav.addObject("message", message);
 			mav.setViewName("/member/loginForm");
@@ -106,4 +106,5 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 		resEntity =new ResponseEntity(result, HttpStatus.OK);
 		return resEntity;
 	}
+	
 }

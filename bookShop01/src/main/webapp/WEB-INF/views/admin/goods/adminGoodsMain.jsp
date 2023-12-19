@@ -100,7 +100,7 @@ function  calcPeriod(search_period){
 	<form method="post">
 		<TABLE cellpadding="10" cellspacing="10">
 			<TBODY>
-				<TR>
+<!-- 				<TR>
 					<TD style="padding-top: 15px; padding-bottom: 15px;">
 					
 					<div class="form-check">
@@ -115,7 +115,7 @@ function  calcPeriod(search_period){
 					    상세조회
 					  </label>
 					</div>
-				</TR>
+				</TR> -->
 				
 				
 				
@@ -184,7 +184,9 @@ function  calcPeriod(search_period){
 
 				<br>
 
-				<tr>
+
+				<!-- 상품 조회 검색란 -->
+<!-- 				<tr>
 				  <td style="padding-top: 15px; padding-bottom: 15px;  ">
 				    <select name="search_condition">
 				      <option value="전체" checked>전체</option>
@@ -196,7 +198,7 @@ function  calcPeriod(search_period){
 					<button type="button" class="btn btn-outline-dark">조회</button>
 
 				  </td>
-				</tr>
+				</tr> -->
 				
 				<tr>
 				  <td style="padding-top: 15px; padding-bottom: 15px;">

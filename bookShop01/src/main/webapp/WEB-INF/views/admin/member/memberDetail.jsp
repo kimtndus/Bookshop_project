@@ -5,11 +5,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
@@ -118,7 +113,9 @@ function init(){
         }).open();
     }
 </script>
+
 <script>
+/* 수정 */
 function fn_modify_member_info(member_id,mod_type){
 	var value;
 	// alert(member_id);
@@ -257,8 +254,7 @@ function fn_modify_member_info(member_id,mod_type){
 		}); //end ajax
 }
 
-
-
+/* 탈퇴 */
 function fn_delete_member(member_id ,del_yn){
 	var frm_mod_member=document.frm_mod_member;
 	var i_member_id = document.createElement("input");
@@ -279,14 +275,8 @@ function fn_delete_member(member_id ,del_yn){
 </script>
 </head>
 
-
-
-
 <body>
 	<h3>내 상세 정보</h3>
-	
-	
-	
 <form name="frm_mod_member">	
 	<div id="detail_table">
 		<table>
@@ -336,8 +326,6 @@ function fn_delete_member(member_id ,del_yn){
 					</td>
 					<td>
 					  <input type="button" value="수정하기" onClick="fn_modify_member_info('${member_info.member_id }','member_gender')" />
-					  <button type="button" class="btn btn-secondary">Secondary</button>
-					  
 					</td>
 				</tr>
 				<tr class="dot_line">
@@ -473,7 +461,6 @@ function fn_delete_member(member_id ,del_yn){
 							<option value="naver.com">naver.com</option>
 							<option value="yahoo.co.kr">yahoo.co.kr</option>
 							<option value="hotmail.com">hotmail.com</option>
-							<option value="paran.com">paran.com</option>
 							<option value="nate.com">nate.com</option>
 							<option value="google.com">google.com</option>
 							<option value="gmail.com">gmail.com</option>
@@ -520,22 +507,47 @@ function fn_delete_member(member_id ,del_yn){
 			<td >
 				<input type="hidden" name="command"  value="modify_my_info" /> 
 				<c:choose>
-				  <c:when test="${member_info.del_yn=='Y' }">
-				    <input  type="button"  value="회원복원" onClick="fn_delete_member('${member_info.member_id }','N')">   
-				  </c:when>
+				  <c:when test="${member_info.del_yn=='Y'}">
+					  <input type="button" value="회원복원" onclick="confirmRestoreMember('${member_info.member_id}');">
+					</c:when>
+					
+				
 				  <c:when  test="${member_info.del_yn=='N' }">
-				    <input  type="button"  value="회원탈퇴" onClick="fn_delete_member('${member_info.member_id }','Y')">
+				    <input  type="button"  value="회원탈퇴" onClick="confirmDeleteMember('${member_info.member_id }','Y')">
 				  </c:when>
 				  
 				</c:choose>
 				
+					<script>
+					  function confirmDeleteMember(memberId) {
+						  var confirmation = confirm("회원을 탈퇴하시겠습니까?");
+					
+					    if (confirmation) {
+					        fn_delete_member(memberId, 'Y');
+					    } else {
+					      
+					    }
+					  }
+					  
+					  
+					  
+					  function confirmRestoreMember(memberId) {
+					    var confirmation = confirm("회원을 복원하시겠습니까?");
+					
+					    if (confirmation) {
+					     
+					      fn_delete_member(memberId, 'N');
+					    } else {
+					      
+					    }
+					  }
+					  
+					  
+					</script>
 			</td>
 		</tr>
 	</table>
 	</div>
-	
-	
-	
 	<input  type="hidden" name="h_tel1" value="${member_info.tel1}" />
 	<input  type="hidden" name="h_hp1" value="${member_info.hp1}" />		
 </form>	

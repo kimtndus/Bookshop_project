@@ -25,6 +25,13 @@
 </style>
 
 
+
+<script>
+
+
+
+</script>
+
 </head>
 
 
@@ -54,7 +61,7 @@
 
 
 
-			<c:when test="${side_menu=='my_page' }">
+			<c:when test="${side_menu=='my_page'}">
 
 				<li>
 					<ul class="list-group list-group-flush">
@@ -64,7 +71,6 @@
 							href="${contextPath}/mypage/listMyOrderHistory.do">주문내역<br>배송 조회</a></li>
 						<li class="list-group-item"><a href="#">반품/교환<br>신청 및 조회</a></li>
 						<li class="list-group-item"><a href="#">취소 내역</a></li>
-<!-- 						<li class="list-group-item"><a href="#">세금 계산서</a></li> -->
 					</ul>
 				</li>
 
@@ -73,14 +79,11 @@
 				
 				<li>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item"
-							style="background: darkcyan; color: white;"><b>정보내역</b></li>
+						<li class="list-group-item" style="background: darkcyan; color: white;"><b>정보내역</b></li>
 						<li class="list-group-item"><a href="${contextPath}/mypage/myDetailInfo.do">회원정보관리</a></li>
-						<li class="list-group-item"><a href="#">나의 주소록</a></li>
-						<li class="list-group-item"><a href="#">개인정보 동의내역</a></li>
-						<li class="list-group-item"><a href="#">회원탈퇴</a></li>
 					</ul>
 				</li>
+						
 				
 				
 				
@@ -93,7 +96,7 @@
 				<li>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item"
-							style="background: darkcyan; color: white;"><b>음반</b></li>
+							style="background: #5C5452; color: white;"><b>도서</b></li>
 						<li class="list-group-item"><a
 							href="#">IT/인터넷</a></li>
 						<li class="list-group-item"><a href="#">경제/경영</a></li>
@@ -109,13 +112,14 @@
 				<li>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item"
-							style="background: darkcyan; color: white;"><b>음반</b></li>
+							style="background: #5C5452; color: white;"><b>음반</b></li>
 						<li class="list-group-item"><a href="#">K-POP</a></li>
 						<li class="list-group-item"><a href="#">Rock</a></li>
 						<li class="list-group-item"><a href="#">Classic</a></li>
 						<li class="list-group-item"><a href="#">Jazz</a></li>
 					</ul>
 				</li>
+				
 			</c:otherwise>
 		</c:choose>
 	</ul>

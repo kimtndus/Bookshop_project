@@ -48,29 +48,13 @@ function fn_cancel_order(order_id){
 
 </script>
 </head>
+
+
 <body>
 	<H3>주문 배송 조회</H3>
-	<form  method="post">	
+	<form  method="post" action="${contextPath}/mypage/listMyOrderHistory.do">	
 		<table>
 			<tbody>
-				<tr>
-					<td style="padding-top: 15px; padding-bottom: 15px;">
-						<div class="form-check">
-					  <input class="form-check-input" type="radio" name="r_search" id="flexRadioDefault2" checked>
-					  <label class="form-check-label" for="flexRadioDefault1">
-					    등록일로조회
-					  </label>
-					</div>
-					<div class="form-check">
-					  <input class="form-check-input" type="radio" name="r_search" id="flexRadioDefault1">
-					  <label class="form-check-label" for="flexRadioDefault2">
-					    상세조회
-					  </label>
-					</div>
-					</td>
-				</tr>
-				
-				
 				
 				<br>
 				<tr>
@@ -134,15 +118,12 @@ function fn_cancel_order(order_id){
 							<button type="button" class="btn btn-outline-primary"
 								onclick="search_order_history('four_month')">4개월</button>
 						</div>  &nbsp; <br>
-						
-					
-					
-					
-					
-					
-					
 					</td>
 				</tr>
+				
+				
+				
+				
 				<tr>
 				  <td style="padding-top: 15px; padding-bottom: 15px;  ">
 				    <select name="search_condition">

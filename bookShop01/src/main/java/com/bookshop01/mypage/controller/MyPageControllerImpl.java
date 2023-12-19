@@ -120,6 +120,8 @@ public class MyPageControllerImpl extends BaseController  implements MyPageContr
 		return mav;
 	}	
 	
+	
+//	¼öÁ¤
 	@Override
 	@RequestMapping(value="/modifyMyInfo.do" ,method = RequestMethod.POST)
 	public ResponseEntity modifyMyInfo(@RequestParam("attribute")  String attribute,
@@ -176,5 +178,7 @@ public class MyPageControllerImpl extends BaseController  implements MyPageContr
 		resEntity =new ResponseEntity(message, responseHeaders, HttpStatus.OK);
 		return resEntity;
 	}	
+	
+	
 	
 }

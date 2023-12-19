@@ -8,8 +8,8 @@
 
 </head>
 <BODY>
-	<H1>1.최종 주문 내역서</H1>
-	<TABLE class="list_view">
+	<H1>최종 주문 내역서</H1>
+	<TABLE class="list_view" >
 		<TBODY align=center>
 			<tr style="background: #009688; color: white;">
 			     <td>주문번호 </td>
@@ -50,11 +50,11 @@
 <form  name="form_order">
 	<br>
 	<br>
-	<H1>2.배송지 정보</H1>
+	<H1>배송지 정보</H1>
 	<DIV class="detail_table">
 	
 		<TABLE>
-			<TBODY>
+			<TBODY style="border-right: 2px solid white;">
 				<TR class="dot_line" >
 					<TD class="fixed_join">배송방법</TD>
 					<TD >
@@ -105,7 +105,7 @@
 	
 	
 	
-	<div style="display:block; margin-top: 260px; margin-left:5px;">
+	<div>
 	  <br><br>
 	   <h2 style="font-size:25px; font-weight: bold; margin-bottom: 15px;">주문고객</h2>
 		 <table >
@@ -138,10 +138,10 @@
 	<br>
 	<br>
 	<br>
-	<H1>3.결제정보</H1>
+	<H1>결제정보</H1>
 	<DIV class="detail_table">
 		<table>
-			<TBODY>
+			<TBODY style="border-right: 2px solid white;">
 				<TR class="dot_line">
 					<TD class="fixed_join">결제방법</TD>
 					<TD>
@@ -171,11 +171,8 @@
 	<center>
 		<br>
 		<br> 
-<%-- 		<a href="${contextPath}/main/main.do"> 
-		   <IMG width="75" alt="" src="${contextPath}/resources/image/btn_shoping_continue.jpg">
-		</a> --%>
 		
-		<button type="button" class="btn btn-outline-primary" onclick="${contextPath}/main/main.do">쇼핑 계속하기</button>
+		<button type="button" class="btn btn-outline-primary" onclick="location.href='${contextPath}/main/main.do'">쇼핑 계속하기</button>
 		
 <DIV class="clear"></DIV>		
 	

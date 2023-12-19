@@ -346,8 +346,6 @@ function fn_order_all_cart_goods(){
 		 	<button type="button" class="btn btn-success">주문하기</button>		 	
 		 </a>
 		 
-		 <a href="#">
-		 	<button type="button" class="btn btn-primary">쇼핑 계속하기</button>
-		 </a>
+		 	<button type="button" class="btn btn-primary" onclick="location.href='${contextPath}/main/main.do'">쇼핑 계속하기</button>
 	<center>
 </form>	

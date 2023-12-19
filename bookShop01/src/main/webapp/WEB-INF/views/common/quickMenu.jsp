@@ -86,25 +86,9 @@ function goodsDetail(){
 	<div id="sticky">
 
 
-		<%-- <ul>
-		<li><a href="#">
-		   <img	width="24" height="24" src="${contextPath}/resources/image/facebook_icon.png">
-				페이스북
-		</a></li>
-		<li><a href="#">
-		   <img width="24" height="24" src="${contextPath}/resources/image/twitter_icon.png">
-			트위터
-		</a></li>
-		<li><a href="#">
-		   <img	width="24" height="24" src="${contextPath}/resources/image/rss_icon.png">
-				RSS 피드
-		 </a></li>
-	</ul> --%>
-
-
 
 		<div class="recent">
-			<h3 style="padding-bottom: 3px; border-bottom: solid #008b8b 1px;">최근 본 상품</h3>
+			<h3 style="padding-bottom: 3px; border-bottom: solid #5c5452 1px;">최근 본 상품</h3>
 			
 			<ul>
 				<!--   상품이 없습니다. -->

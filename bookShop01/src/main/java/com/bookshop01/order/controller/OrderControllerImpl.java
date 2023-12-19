@@ -41,6 +41,8 @@ public class OrderControllerImpl extends BaseController implements OrderControll
 		
 		Boolean isLogOn=(Boolean)session.getAttribute("isLogOn");
 		String action=(String)session.getAttribute("action");
+		
+		
 		//로그인 여부 체크
 		//이전에 로그인 상태인 경우는 주문과정 진행
 		//로그아웃 상태인 경우 로그인 화면으로 이동
@@ -69,6 +71,8 @@ public class OrderControllerImpl extends BaseController implements OrderControll
 		session.setAttribute("orderer", memberInfo);
 		return mav;
 	}
+	
+	
 	
 	@RequestMapping(value="/orderAllCartGoods.do" ,method = RequestMethod.POST)
 	public ModelAndView orderAllCartGoods( @RequestParam("cart_goods_qty")  String[] cart_goods_qty,

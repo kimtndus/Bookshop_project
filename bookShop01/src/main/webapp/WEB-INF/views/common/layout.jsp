@@ -37,14 +37,28 @@
 <script>
 	// 슬라이드 
 	$(document).ready(function() {
-		$('#ad_main_banner').bjqs({
-			'width' : 775,
-			'height' : 145,
-			'showMarkers' : true,
-			'showControls' : false,
-			'centerMarkers' : false
-		});
+	    // ad_main_banner2 초기화
+	    $('#ad_main_banner2').bjqs2({
+	        'width' : 850,
+	        'height' : 100,
+	        'showMarkers' : true,
+	        'showControls' : false,
+	        'centerMarkers' : false
+	    });
+	
+	    // ad_main_banner 초기화
+	    $('#ad_main_banner').bjqs({
+	        'width' : 850,
+	        'height' : 400,
+	        'showMarkers' : true,
+	        'showControls' : false,
+	        'centerMarkers' : false
+	    });
 	});
+
+
+
+
 	
 	
 	// 스티키
